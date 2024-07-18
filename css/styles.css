@@ -1,0 +1,301 @@
+/* ********** Custom Properties ********** */
+
+:root {
+    /* Typography */
+    --main-font: 'Raleway';
+    --alternate-font: sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
+    /* Colors */
+    --main-color: rgb( 13, 110, 253);
+    --main-modal-color: rgb(217, 0, 98, .75);
+    --second-color: rgb(20, 25, 45);
+    --second-modal-color: rgba(20, 25, 45, .75);
+    --alternate-color: rgb(80, 20, 100);
+    --alternate-modal-color: rgb(80, 20, 100, .75);
+    --action-color: rgb(84, 194, 141);
+    --action-modal-color: rgba(84, 194, 84, .75);
+    --bg-color: rgb(242, 244, 247);
+    --bg-modal-color: rgba(242, 244, 247, .75);
+    --bg-alternate-color: rgb(255, 255, 255);
+    --bg-alternate-modal-color: rgba(255, 255, 255, .75);
+    --border-color: #DDD;
+    --text-color: #515B6D;
+    --title-color: #333;
+    --link-color: #509EE3;
+    --link-hover-color: var(--main-color);
+    /* Layout */
+    --max-width: 1200px;
+    --header-height: 4rem;
+    --logo-width: 4rem;
+    --logo-height: 4rem;
+    --logo-spacing: .5rem;
+    --nav-height: 64px;
+}
+
+
+/* ********** Reset Styles ********** */
+
+html {
+    font-family: var(--main-font), var(--alternate-font);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: #2a9ba6;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    padding-top: var(--logo-height);
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: inherit;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s ease-out;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+textarea {
+    resize: none;
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+
+/* ********** Bootstrap Custom Styles ********** */
+
+.bg-dark {
+    background-color: var(--second-color) !important;
+}
+
+.navbar-brand img {
+    height: var(--logo-height);
+    width: auto;
+    padding: var(--logo-spacing);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    outline: 0;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    transition: all .3s ease;
+}
+
+.navbar-dark .navbar-toggler-icon:hover {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(217, 0, 98, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-item:hover {
+    background-color: var(--main-modal-color);
+    transition: all .3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    display: block;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: bold;
+    transition: all .3s ease;
+    text-align: center;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--bg-color);
+}
+
+.bg-success {
+    background-color: var(--action-color) !important;
+}
+
+a.bg-success:hover {
+    background-color: var(--action-color) !important;
+    opacity: .85;
+    transition: all .3s ease;
+}
+
+.text-success {
+    color: var(--action-color) !important;
+}
+
+.card a {
+    color: var(--alternate-color);
+}
+
+.card a:hover {
+    color: var(--alternate-modal-color);
+}
+
+.card-img-overlay {
+    background-color: var(--second-modal-color);
+}
+
+.card-text a {
+    color: var(--action-color);
+}
+
+.card-text a:hover {
+    color: var(--action-modal-color);
+}
+
+.form-control {
+    border-color: var(--second-color);
+}
+
+.form-control:focus {
+    border-color: var(--second-color);
+    box-shadow: 0 0 0 0.2rem var(--main-modal-color);
+}
+
+.form-group label {
+    color: #fff;
+    border-color: var(--second-color);
+}
+
+.form-group .btn {
+    background-color: var(--main-color) !important;
+    font-weight: bold;
+}
+
+
+/* ********** My Styles ********** */
+
+.HeroImage {
+    min-height: calc(100vh - var(--header-height));
+    color: #fff;
+    background-size: auto;
+    background-color: rgb(108, 130, 145);
+    background-image: linear-gradient(135deg, rgba(47, 145, 224, .91), rgba(7, 31, 51, .97) 79%);
+    background-image: linear-gradient(135deg, rgba(28, 118, 173, .92), rgba(83, 184, 152, 1));
+}
+
+.Services img {
+    background-color: var(--action-color);
+}
+
+.Website .carousel {
+    margin: auto;
+    max-width: 700px;
+    height: auto;
+}
+
+.ResponsiveSites figure {
+    margin: 0;
+    text-align: center;
+}
+
+.ResponsiveSites img {
+    padding: .5rem;
+}
+
+.WorkFlow-steps sup {
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+.SinglePage,
+.MultiPage {
+    background-image: url('../img/site-singlepage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.SinglePage>.u-fullScreen,
+.MultiPage>.u-fullScreen {
+    background-color: var(--bg-modal-color);
+}
+
+.MultiPage {
+    background-image: url('../img/site-multipage.jpg');
+}
+
+.AboutInfo {
+    padding: 1rem;
+    font-size: 150%;
+    background-color: var(--second-modal-color);
+}
+
+.Footer {
+    background-color: var(--second-color);
+}
+
+.u-flowText {
+    font-size: 1.25rem;
+}
+
+.u-fullScreen {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Slider */
+.carousel-item {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+/* Iconos */
+.fasize{
+    font-size: 30px;
+}
+.img-thumbnail
+{
+    height:170px;
+}
+/* ********** Media Queries ********** */
+@media (max-width: 767px) {
+    #servicios{
+      display:none;
+    }
+  }
+  
+  /*sm*/
+  @media (min-width: 768px) and (max-width: 991px) {
+    #servicios{
+      display:none;
+    }
+  }
+
+/* Large - 992px */
+
+@media (min-width: 992px) {
+    .nav-item:hover {
+        background-color: transparent;
+    }
+    .u-flowText {
+        font-size: 1.75rem;
+    }
+}
+
+
+/* Extra Large - 1200px */
+
+@media (min-width: 1200px) {}
