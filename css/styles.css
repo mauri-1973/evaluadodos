@@ -272,14 +272,14 @@ a.bg-success:hover {
 }
 /* ********** Media Queries ********** */
 @media (max-width: 767px) {
-    #servicios{
+    .servmos{
       display:none;
     }
   }
   
   /*sm*/
   @media (min-width: 768px) and (max-width: 991px) {
-    #servicios{
+    .servmos{
       display:none;
     }
   }

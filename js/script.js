@@ -20,7 +20,7 @@
         });
         
     })
-    window.addEventListener('resize', changeScreen);
+    //window.addEventListener('resize', changeScreen);
         
 })(document);
 function changeScreen(e){
